@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>HGHome - ネオンノッチメニュー</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="notch">
+      <button class="menu-btn active" data-target="home">🏠 ホーム</button>
+      <button class="menu-btn" data-target="study">📚 学習</button>
+      <button class="menu-btn" data-target="game">🎮 ゲーム</button>
+      <button class="menu-btn" data-target="youtube">▶️ YouTube</button>
+      <button class="menu-btn" data-target="other">🧩 その他</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="home" class="section active">
+      <div class="home-left">
+        <div class="home-text">
+          <h1>🏠 ホーム</h1>
+          <p>HGHomeへようこそ！動画や最新情報はこちらに。</p>
+        </div>
+        
+        <div class="news-section">
+          <h2>📰 最新情報</h2>
+          <div class="news-item">
+            <div class="news-date">2025/07/27</div>
+            <div class="news-title">ホームページを公開しました</div>
+            <div class="news-content">ホームページを公開しました</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="home-discord">
+        <iframe
+          src="https://discord.com/widget?id=1376869517065715784&theme=dark"
+          width="350"
+          height="500" 
+          allowtransparency="true"
+          frameborder="0" 
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+      </div>
+    </div>
+
+    <div id="study" class="section">
+      <h1>📚 学習</h1>
+      <p>AI学習、プログラミング、数学コンテンツなど！</p>
+      
+      <div class="study-container">
+        <div class="study-section">
+          <h2>🌍 言語学習</h2>
+          <div class="selection-grid">
+            <div class="selection-item" data-category="language" data-value="english">
+              <div class="item-icon">🇺🇸</div>
+              <div class="item-title">英語</div>
+              <div class="item-desc">日常会話・ビジネス</div>
+            </div>
+            <div class="selection-item" data-category="language" data-value="chinese">
+              <div class="item-icon">🇨🇳</div>
+              <div class="item-title">中国語</div>
+              <div class="item-desc">簡体字・繁体字</div>
+            </div>
+            <div class="selection-item" data-category="language" data-value="korean">
+              <div class="item-icon">🇰🇷</div>
+              <div class="item-title">韓国語</div>
+              <div class="item-desc">会話・文法</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="study-section">
+          <h2>💻 プログラミング言語</h2>
+          <div class="selection-grid">
+            <div class="selection-item" data-category="programming" data-value="python">
+              <div class="item-icon">🐍</div>
+              <div class="item-title">Python</div>
+              <div class="item-desc">AI・データ分析</div>
+            </div>
+            <div class="selection-item" data-category="programming" data-value="javascript">
+              <div class="item-icon">🟨</div>
+              <div class="item-title">JavaScript</div>
+              <div class="item-desc">Web開発</div>
+            </div>
+            <div class="selection-item" data-category="programming" data-value="cpp">
+              <div class="item-icon">⚡</div>
+              <div class="item-title">C</div>
+              <div class="item-desc">システム開発</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="selected-items">
+        <h3>選択中の学習内容:</h3>
+        <div id="selected-display">
+          <span class="no-selection">まだ何も選択されていません</span>
+        </div>
+        <div class="study-content-area">
+          <div id="study-content"></div>
+        </div>
+      </div>
+    </div>
+    <div id="game" class="section">
+      <h1>🎮 ゲーム</h1>
+      <p>ゲームアーカイブ、ランキング、プレイリンク。</p>
+    </div>
+    <div id="youtube" class="section">
+      <h1>▶️ YouTube</h1>
+      <p>おすすめチャンネル、動画プレイヤー、連携など。</p>
+    </div>
+    <div id="other" class="section">
+      <h1>🧩 その他</h1>
+      <p>設定、ツール集、AR/VR関連、スマート連携など。</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

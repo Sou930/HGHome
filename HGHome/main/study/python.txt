@@ -1,0 +1,187 @@
+1. はじめに
+Python（パイソン）は、読みやすくシンプルな文法が特徴のプログラミング言語で、AI・Webアプリ・データ分析など幅広い分野で使われています。初心者にも始めやすく、現在最も人気のある言語の一つです。
+
+この記事では、Pythonの基本を約5,000字で網羅的に解説します。初めての方でも「読んで試すだけで流れがわかる」ように構成しています。
+
+2. Pythonの特徴
+文法がシンプル
+他の言語に比べて記述が少なく、英語のような自然な書き方ができます。
+
+動的型付け
+変数に型を指定する必要がなく、自動で型が決まります。
+
+豊富なライブラリ
+数値計算（NumPy）、AI（TensorFlow, PyTorch）、Web開発（Flask, Django）など、様々なライブラリがあります。
+
+3. 開発環境の整え方
+● インストール
+Python公式サイト（https://www.python.org）から最新版をダウンロードしてインストールします。
+またはオンラインで使える Google Colab や Replit もおすすめ。
+
+● エディタ
+Visual Studio Code（VSCode）
+
+PyCharm
+
+Jupyter Notebook（特にデータ分析向け）
+
+4. 基本文法
+● 変数とデータ型
+python
+コピーする
+編集する
+x = 10          # 整数（int）
+y = 3.14        # 浮動小数点数（float）
+name = "Tom"    # 文字列（str）
+is_ok = True    # 真偽値（bool）
+● 出力
+python
+コピーする
+編集する
+print("Hello, world!")
+● 入力
+python
+コピーする
+編集する
+name = input("あなたの名前は？")
+print("こんにちは、" + name + "さん！")
+● 型の変換
+python
+コピーする
+編集する
+age = int(input("年齢は？"))
+5. 演算子
+種類	記号	説明
+四則演算	+ - * /	足し算、引き算など
+剰余	%	余りを求める
+べき乗	**	例：2**3 → 8
+比較	== != > < >= <=	真偽値を返す
+論理	and or not	条件の組み合わせ
+
+6. 条件分岐（if文）
+python
+コピーする
+編集する
+age = int(input("年齢は？"))
+
+if age >= 20:
+    print("成人です。")
+elif age >= 13:
+    print("ティーンです。")
+else:
+    print("子どもです。")
+**インデント（字下げ）**が超重要！Pythonは波括弧 {} を使わないので、スペースのずれでエラーになります。
+
+7. 繰り返し（for文 / while文）
+● for文（回数が決まっている）
+python
+コピーする
+編集する
+for i in range(5):
+    print(i)
+● while文（条件がTrueの間）
+python
+コピーする
+編集する
+n = 0
+while n < 5:
+    print(n)
+    n += 1
+8. リストと辞書（データ構造）
+● リスト（配列）
+python
+コピーする
+編集する
+fruits = ["apple", "banana", "orange"]
+print(fruits[0])     # → apple
+fruits.append("grape")
+● 辞書（キーと値のセット）
+python
+コピーする
+編集する
+person = {"name": "Tom", "age": 20}
+print(person["name"])   # → Tom
+9. 関数（def）
+python
+コピーする
+編集する
+def greet(name):
+    print("こんにちは、" + name + "さん！")
+
+greet("奏介")
+引数や戻り値も使えます。
+
+python
+コピーする
+編集する
+def add(a, b):
+    return a + b
+10. モジュールとライブラリ
+Pythonには便利なモジュールがたくさんあります。使うには import を使います。
+
+python
+コピーする
+編集する
+import math
+print(math.sqrt(16))   # → 4.0
+よく使う標準モジュール
+math（数学）
+
+random（乱数）
+
+datetime（日付）
+
+11. ファイルの読み書き
+python
+コピーする
+編集する
+# 書き込み
+with open("test.txt", "w") as f:
+    f.write("こんにちは！")
+
+# 読み込み
+with open("test.txt", "r") as f:
+    print(f.read())
+12. 例外処理（エラー対策）
+python
+コピーする
+編集する
+try:
+    x = int(input("数字を入れて："))
+    print(10 / x)
+except ZeroDivisionError:
+    print("0で割ることはできません")
+except ValueError:
+    print("数値を入力してね")
+13. クラスとオブジェクト（面倒ならスキップOK）
+python
+コピーする
+編集する
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name + "：ワン！")
+
+dog1 = Dog("ポチ")
+dog1.bark()
+14. 実用例（簡単なアプリ）
+● おみくじアプリ
+python
+コピーする
+編集する
+import random
+
+fortune = ["大吉", "中吉", "小吉", "凶"]
+print("あなたの運勢は…「" + random.choice(fortune) + "」です！")
+15. まとめ
+Pythonは「初心者が最も学びやすく、プロでもガチで使う」非常に万能な言語です。この記事では：
+
+文法の基本
+
+よく使う機能や構文
+
+小さなアプリの例
+
+を取り上げました。まずは print() や if、for をいじってみるだけでも大きな一歩です！
